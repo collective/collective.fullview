@@ -1,5 +1,5 @@
-Changelog
-=========
+Changes
+=======
 
 1.0dev (unreleased)
 -------------------
