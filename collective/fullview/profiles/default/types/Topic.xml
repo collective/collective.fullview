@@ -2,6 +2,6 @@
 <object name="Topic">
  <property name="view_methods" purge="False">
   <element value="folder_full_view" remove="True"/>
-  <element value="@@full_view"/>
+  <element value="full_view"/>
  </property>
 </object>
