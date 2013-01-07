@@ -26,4 +26,8 @@ setup(name='collective.fullview',
           'Zope2', # For Products.Five
           'zope.publisher',
       ],
+      entry_points="""
+      [z3c.autoinclude.plugin]
+      target = plone
+      """,
       )
