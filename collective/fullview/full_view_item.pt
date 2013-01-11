@@ -36,13 +36,14 @@
             <div tal:replace="structure provider:plone.abovecontentbody" />
 
             <div tal:define="view nocall:view/default_view;
+                             portal_state context/@@plone_portal_state;
+                             context_state context/@@plone_context_state;
+                             plone_view context/@@plone;
+                             lang portal_state/language;
+                             dummy python: plone_view.mark_view(view);
+                             portal_url portal_state/portal_url;
                              checkPermission nocall: context/portal_membership/checkPermission;
-                             site_properties context/portal_properties/site_properties;
-                             item_type context/portal_type;
-                             normalizeString nocall: context/plone_utils/normalizeString;
-                             item_type_class python: 'contenttype-' + normalizeString(item_type);
-                             kss_inline_editable python:False;
-                             ">
+                             site_properties context/portal_properties/site_properties;">
             <div metal:use-macro="item_macro">
                 content
             </div>
