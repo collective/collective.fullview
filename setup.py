@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = '1.0dev'
+version = '1.0htug2'
 
 setup(name='collective.fullview',
       version=version,
