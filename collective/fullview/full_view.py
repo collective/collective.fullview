@@ -33,3 +33,23 @@ class FullViewItem(BrowserView):
         props = getToolByName(context, 'portal_properties')
         use_view_action = props.site_properties.typesUseViewActionInListings
         return self.item_type in use_view_action and '%s/view' % url or url
+
+    @property
+    def is_pfg(self):
+        # context is a PloneFormGen FormFolder.
+        # We have to handle it differently
+        return self.item_type == "FormFolder"
+
+    @property
+    def pfg_prefix(self):
+        pfg_prefix = getattr(self, '_pfg_prefix', 0)
+        pfg_prefix += 1
+        self._pfg_prefix = pfg_prefix
+        return '_pfg_prefix_%s' % pfg_prefix
+
+    @property
+    def pfg_form(self):
+        if not self.is_pfg: return None
+        form_view = self.context.restrictedTraverse('@@embedded')
+        form_view.prefix = self.pfg_prefix
+        return form_view()
