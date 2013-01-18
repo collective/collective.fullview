@@ -42,9 +42,9 @@ class FullViewItem(BrowserView):
 
     @property
     def pfg_prefix(self):
-        pfg_prefix = getattr(self, '_pfg_prefix', 0)
+        pfg_prefix = self.request.get('_pfg_prefix', 0)
         pfg_prefix += 1
-        self._pfg_prefix = pfg_prefix
+        self.request.set('_pfg_prefix', pfg_prefix)
         return '_pfg_prefix_%s' % pfg_prefix
 
     @property

@@ -1,6 +1,14 @@
 Changes
 =======
 
+1.1.1 (unreleased)
+------------------
+
+- Fix pfg_prefix for PloneFormGen forms to really return a unique prefix per
+  form in a full_view.
+  [thet]
+
+
 1.1 (2013-01-16)
 ----------------
 
