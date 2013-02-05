@@ -1,6 +1,13 @@
 Changes
 =======
 
+1.2 (unreleased)
+----------------
+
+- Allow recursive expansion of full_view views.
+  [thet]
+
+
 1.1.1 (2013-01-18)
 ------------------
 

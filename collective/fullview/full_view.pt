@@ -9,7 +9,8 @@
 <body>
 
     <metal:content-core fill-slot="content-core">
-        <metal:block use-macro="context/folder_listing/macros/content-core">
+    <metal:block define-macro="content-core">
+        <metal:listing use-macro="context/folder_listing/macros/content-core">
             <!-- we don't want the dl -->
             <metal:entries fill-slot="entries">
                 <metal:block use-macro="context/folder_listing/macros/entries">
@@ -20,7 +21,8 @@
                     </metal:entry>
                 </metal:block>
             </metal:entries>
-        </metal:block>
+        </metal:listing>
+    </metal:block>
     </metal:content-core>
 
 </body>
