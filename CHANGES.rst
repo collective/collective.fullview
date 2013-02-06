@@ -1,7 +1,7 @@
 Changes
 =======
 
-1.2 (unreleased)
+1.2 (2013-02-06)
 ----------------
 
 - Allow recursive expansion of full_view views.
