@@ -1,6 +1,13 @@
 Changes
 =======
 
+1.3dev (unreleased)
+-------------------
+
+- Register "en" and "de" translations.
+  [thet]
+
+
 1.2 (2013-02-06)
 ----------------
 
